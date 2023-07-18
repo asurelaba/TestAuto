@@ -1,6 +1,5 @@
 package com.solvd.carina.dummyjson.apitest;
 
-import com.solvd.carina.demo.api.product.*;
 import com.solvd.carina.dummyjson.api.product.*;
 import com.zebrunner.carina.api.apitools.validation.JsonCompareKeywords;
 import com.zebrunner.carina.core.IAbstractTest;
