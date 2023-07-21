@@ -23,6 +23,7 @@ public class DashboardPage extends AbstractPage {
 
     public EmployeeTimeSheetsPage clickTimeSheetsButton() {
         timeSheetsButton.click();
+        pause(3);
         return new EmployeeTimeSheetsPage(driver);
     }
 }

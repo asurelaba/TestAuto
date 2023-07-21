@@ -9,15 +9,23 @@ import org.openqa.selenium.support.FindBy;
 
 public class EmployeeTimeSheetRecord extends AbstractUIObject {
 
-    @FindBy(xpath = ".//button[text()=' View ']")
+    @FindBy(xpath = "./div[@role='row']/*[1]/div[text()]")
+    private ExtendedWebElement employeeName;
+
+    @FindBy(xpath = ".//button")
     private ExtendedWebElement viewButton;
 
-    protected EmployeeTimeSheetRecord(WebDriver driver, SearchContext searchContext) {
+    public EmployeeTimeSheetRecord(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
     public TimesheetForEmployeePage clickViewButton() {
+        viewButton.isElementPresent();
         viewButton.click();
         return new TimesheetForEmployeePage(driver,"Test collings");
+    }
+
+    public String getEmployeeName() {
+        return employeeName.getText();
     }
 }

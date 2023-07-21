@@ -27,7 +27,7 @@ public class EmployeeTimeSheetsPage extends AbstractPage {
     }
 
     public int getNumberOfRecordsFound() {
-        return 0;
+        return employeeTimeSheetRecords.size();
     }
 
     public List<EmployeeTimeSheetRecord> getEmployeeTimeSheetRecords() {
