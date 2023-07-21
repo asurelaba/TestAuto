@@ -18,7 +18,6 @@
 /src/main/resources/mappers/
 /src/main/resources/_database.properties
 /src/main/resources/_email.properties
-/src/main/resources/_testdata.properties
 /src/main/resources/agent.properties
 /src/main/resources/mybatis-config.xml
 /reports/
