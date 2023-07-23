@@ -10,12 +10,14 @@ import com.zebrunner.carina.api.http.HttpResponseStatusType;
 import com.zebrunner.carina.utils.config.Configuration;
 
 
-@Endpoint(url = "${base_url}/products/1", methodType = HttpMethodType.PUT)
+@Endpoint(url = "${base_url}/products/${product_id}", methodType = HttpMethodType.PUT)
 @RequestTemplatePath(path = "api/products/_put/request.json")
 @ResponseTemplatePath(path = "api/products/_put/response.json")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.OK_200)
 public class PutProductMethod extends AbstractApiMethodV2 {
-    public PutProductMethod() {
+
+    public PutProductMethod(int productId) {
         replaceUrlPlaceholder("base_url", Configuration.getRequired("api_url"));
+        replaceUrlPlaceholder("product_id", String.valueOf(productId));
     }
 }
