@@ -3,7 +3,15 @@
 
     <test name="Product API tests">
         <classes>
-            <class name="com.solvd.carina.dummyjson.apitest.ProductTest"/>
+            <class name="com.solvd.carina.dummyjson.apitest.ProductTest">
+                <methods>
+                    <include name="testCreateProduct"/>
+                    <include name="testGetProduct"/>
+                    <include name="testDeleteProduct"/>
+                    <include name="testPutProduct"/>
+                    <include name="testGetAllProducts"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
