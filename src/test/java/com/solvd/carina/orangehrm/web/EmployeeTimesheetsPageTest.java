@@ -25,6 +25,6 @@ public class EmployeeTimesheetsPageTest extends AbstractTest {
         EmployeeTimeSheetsPage employeeTimeSheetsPage = dashboardPage.clickTimeSheetsButton();
         Assert.assertTrue(employeeTimeSheetsPage.isPageOpened(), "Employee timesheets page is not opened");
         List<EmployeeTimeSheetRecord> recordList = employeeTimeSheetsPage.getEmployeeTimeSheetRecords();
-        Assert.assertEquals(employeeTimeSheetsPage.getNumberOfRecordsFoundText(),recordList.size());
+        Assert.assertEquals(employeeTimeSheetsPage.getNumberOfRecordsFoundText(),recordList.size(),"Number of records does not match the records in the table");
     }
 }
