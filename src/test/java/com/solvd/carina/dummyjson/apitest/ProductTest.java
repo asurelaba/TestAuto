@@ -31,6 +31,7 @@ public class ProductTest implements IAbstractTest {
     public void testGetProduct() {
         LOGGER.info("testGetProducts");
         GetProductMethod getProductMethod = new GetProductMethod(1);
+        getProductMethod.callAPIExpectSuccess();
         getProductMethod.validateResponseAgainstSchema("api/products/_get/response.schema");
     }
 
