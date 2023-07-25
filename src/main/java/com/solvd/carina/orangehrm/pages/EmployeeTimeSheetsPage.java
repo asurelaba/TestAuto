@@ -7,9 +7,7 @@ import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
-import java.util.regex.Pattern;
 
 public class EmployeeTimeSheetsPage extends AbstractPage {
 
