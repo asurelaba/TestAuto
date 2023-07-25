@@ -4,7 +4,6 @@ import com.solvd.carina.orangehrm.components.Header;
 import com.solvd.carina.orangehrm.pages.DashboardPage;
 import com.solvd.carina.orangehrm.pages.LoginPage;
 import com.solvd.carina.utils.LoginUtils;
-import com.solvd.carina.utils.NavigationUtils;
 import com.zebrunner.carina.core.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,6 +18,6 @@ public class LogoutTest extends AbstractTest {
         Header header = dashboardPage.getHeader();
         header.clickUserDropdown();
         LoginPage loginPage = header.clickLogout();
-        Assert.assertTrue(loginPage.isPageOpened(),"Login page is not shown on Logout");
+        Assert.assertTrue(loginPage.isPageOpened(), "Login page is not shown on Logout");
     }
 }

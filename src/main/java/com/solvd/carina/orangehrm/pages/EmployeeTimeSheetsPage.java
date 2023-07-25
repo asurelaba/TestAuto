@@ -30,7 +30,7 @@ public class EmployeeTimeSheetsPage extends AbstractPage {
 
     public int getNumberOfRecordsFoundText() {
         recordsFoundText.isElementPresent();
-        String num = StringUtils.substringBetween(recordsFoundText.getText(),"(",")");
+        String num = StringUtils.substringBetween(recordsFoundText.getText(), "(", ")");
         return Integer.parseInt(num.trim());
     }
 

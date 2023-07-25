@@ -10,8 +10,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends AbstractPage {
 
-    private static final Logger LOGGER = LogManager.getLogger(LoginPage.class);
-
     @FindBy(xpath = ".//input[@name='username']")
     private ExtendedWebElement usernameField;
 

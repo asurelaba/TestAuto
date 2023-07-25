@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
 
-    @FindBy(xpath = ".//li[@class='oxd-userdropdown-tab']")
+    @FindBy(xpath = ".//li[@class='oxd-userdropdown']")
     private ExtendedWebElement userDropdown;
 
     @FindBy(xpath = " .//ul[@class='oxd-dropdown-menu']//a[text()='Logout']")
@@ -18,7 +18,7 @@ public class Header extends AbstractUIObject {
     @FindBy(xpath = ".//p[@class='oxd-userdropdown-name']")
     private ExtendedWebElement userName;
 
-    protected Header(WebDriver driver, SearchContext searchContext) {
+    public Header(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 

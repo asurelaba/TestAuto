@@ -12,7 +12,6 @@
 /src/test/resources/api/users/
 /src/test/resources/data_source/
 /src/test/resources/features/
-/src/test/resources/testng_suites/
 /src/main/resources/browserstack/
 /src/main/resources/L10N/
 /src/main/resources/mappers/
