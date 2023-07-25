@@ -23,7 +23,6 @@ public class Header extends AbstractUIObject {
     }
 
     public LoginPage clickLogout() {
-        logoutLink.isElementPresent();
         logoutLink.click();
         return new LoginPage(driver);
     }

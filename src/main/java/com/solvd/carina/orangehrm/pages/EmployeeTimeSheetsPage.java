@@ -23,17 +23,15 @@ public class EmployeeTimeSheetsPage extends AbstractPage {
     protected EmployeeTimeSheetsPage(WebDriver driver) {
         super(driver);
         setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
-        setUiLoadedMarker(title);
+        setUiLoadedMarker(recordsFoundText);
     }
 
     public int getNumberOfRecordsFoundText() {
-        recordsFoundText.isElementPresent();
         String num = StringUtils.substringBetween(recordsFoundText.getText(), "(", ")");
         return Integer.parseInt(num.trim());
     }
 
         public List<EmployeeTimeSheetRecord> getEmployeeTimeSheetRecords() {
-        recordsFoundText.isElementPresent();
         return employeeTimeSheetRecords;
     }
 }
