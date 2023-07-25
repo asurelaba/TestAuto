@@ -11,10 +11,17 @@ public class TimesheetForEmployeePage extends AbstractPage {
     @FindBy(xpath = "//div//h6[text()='Timesheet for %s']")
     private ExtendedWebElement timesheetHeaderText;
 
-    public TimesheetForEmployeePage(WebDriver driver, String employeeName) {
+    @FindBy(xpath = "//div//p[text()='Timesheet Period']")
+    private ExtendedWebElement timesheetPeriodText;
+
+    public TimesheetForEmployeePage(WebDriver driver) {
         super(driver);
-        timesheetHeaderText.format(employeeName);
         setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
-        setUiLoadedMarker(timesheetHeaderText);
+        setUiLoadedMarker(timesheetPeriodText);
+    }
+
+    public boolean isTimesheetForEmployeePresent(String employeeName) {
+        timesheetHeaderText.format(employeeName);
+        return timesheetHeaderText.isElementPresent();
     }
 }

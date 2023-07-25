@@ -22,7 +22,7 @@ public class EmployeeTimeSheetRecord extends AbstractUIObject {
     public TimesheetForEmployeePage clickViewButton() {
         viewButton.isElementPresent();
         viewButton.click();
-        return new TimesheetForEmployeePage(driver,"Test collings");
+        return new TimesheetForEmployeePage(driver);
     }
 
     public String getEmployeeName() {

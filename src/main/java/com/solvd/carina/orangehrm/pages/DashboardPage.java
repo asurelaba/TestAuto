@@ -9,6 +9,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class DashboardPage extends AbstractPage {
 
+    @FindBy(xpath = "//div[@class='oxd-topbar-header']")
+    private Header header;
+
     @FindBy(xpath = "//h6[text()='Dashboard']")
     private ExtendedWebElement title;
 
@@ -23,7 +26,11 @@ public class DashboardPage extends AbstractPage {
 
     public EmployeeTimeSheetsPage clickTimeSheetsButton() {
         timeSheetsButton.click();
-        //pause(3);
         return new EmployeeTimeSheetsPage(driver);
+    }
+
+    public Header getHeader() {
+        isPageOpened();
+        return header;
     }
 }

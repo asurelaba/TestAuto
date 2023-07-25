@@ -9,15 +9,26 @@ import org.openqa.selenium.support.FindBy;
 
 public class Header extends AbstractUIObject {
 
-    @FindBy(xpath = ".//ul[@class='oxd-dropdown-menu']/*[last()]/a")
+    @FindBy(xpath = ".//li[@class='oxd-userdropdown-tab']")
+    private ExtendedWebElement userDropdown;
+
+    @FindBy(xpath = " .//ul[@class='oxd-dropdown-menu']//a[text()='Logout']")
     private ExtendedWebElement logoutLink;
+
+    @FindBy(xpath = ".//p[@class='oxd-userdropdown-name']")
+    private ExtendedWebElement userName;
 
     protected Header(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
     public LoginPage clickLogout() {
+        logoutLink.isElementPresent();
         logoutLink.click();
         return new LoginPage(driver);
+    }
+
+    public void clickUserDropdown() {
+        userDropdown.click();
     }
 }
