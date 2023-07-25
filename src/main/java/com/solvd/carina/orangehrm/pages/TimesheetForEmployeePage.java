@@ -21,7 +21,6 @@ public class TimesheetForEmployeePage extends AbstractPage {
     }
 
     public boolean isTimesheetForEmployeePresent(String employeeName) {
-        timesheetHeaderText.format(employeeName);
-        return timesheetHeaderText.isElementPresent();
+        return timesheetHeaderText.format(employeeName).isElementPresent();
     }
 }
