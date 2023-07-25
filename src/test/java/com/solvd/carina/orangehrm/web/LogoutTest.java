@@ -3,17 +3,14 @@ package com.solvd.carina.orangehrm.web;
 import com.solvd.carina.orangehrm.components.Header;
 import com.solvd.carina.orangehrm.pages.DashboardPage;
 import com.solvd.carina.orangehrm.pages.LoginPage;
-import com.solvd.carina.utils.LoginUtils;
-import com.zebrunner.carina.core.AbstractTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LogoutTest extends AbstractTest {
+public class LogoutTest extends AbstractWebTest {
 
     @Test
     public void testLogout() {
-        LoginUtils loginUtils = new LoginUtils();
-        DashboardPage dashboardPage = loginUtils.loginStandardUser();
+        DashboardPage dashboardPage = login();
         dashboardPage.isPageOpened();
         Header header = dashboardPage.getHeader();
         header.clickUserDropdown();
