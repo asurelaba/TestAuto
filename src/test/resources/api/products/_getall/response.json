@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": "skip",
+      "title": "iPhone 9",
+      "description": "type:String",
+      "price": "skip",
+      "discountPercentage": "skip",
+      "rating": "skip",
+      "stock": "skip",
+      "brand": "type:String",
+      "category": "smartphones",
+      "thumbnail": "skip",
+      "images": "skip"
+    }
+  ],
+  "total": "type:Integer",
+  "skip": "skip",
+  "limit": "skip"
+}

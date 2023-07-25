@@ -1,0 +1,15 @@
+{
+  "id": "skip",
+  "title": "type:String",
+  "description": "type:String",
+  "price": "regex:[\\d]*",
+  "discountPercentage": "regex:[\\d]+.[\\d]*",
+  "rating": "regex:[\\d]+.[\\d]*",
+  "stock": "regex:[\\d]",
+  "brand": "type:String",
+  "category": "type:String",
+  "thumbnail": "type:String",
+  "images": [
+    "type:String"
+  ]
+}
