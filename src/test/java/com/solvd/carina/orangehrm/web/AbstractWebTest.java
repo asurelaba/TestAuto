@@ -8,11 +8,7 @@ import com.zebrunner.carina.core.IAbstractTest;
 
 public class AbstractWebTest implements IAbstractTest {
 
-    public DashboardPage login() {
-        return new LoginUtils().loginStandardUser();
-    }
+    protected LoginUtils loginUtils = new LoginUtils();
 
-    public EmployeeTimeSheetsPage navigateToTimeSheets() {
-        return new NavigationUtils().navigateToEmployeeTimeSheetsPage();
-    }
+    protected NavigationUtils navigationUtils = new NavigationUtils();
 }

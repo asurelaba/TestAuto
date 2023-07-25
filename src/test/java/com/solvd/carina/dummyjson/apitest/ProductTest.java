@@ -22,7 +22,6 @@ public class ProductTest implements IAbstractTest {
         postProductMethod.setProperties("api/products/product.properties");
         postProductMethod.callAPIExpectSuccess();
         postProductMethod.validateResponse();
-
     }
 
     @Test

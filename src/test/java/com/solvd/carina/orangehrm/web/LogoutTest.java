@@ -10,8 +10,8 @@ public class LogoutTest extends AbstractWebTest {
 
     @Test
     public void testLogout() {
-        DashboardPage dashboardPage = login();
-        dashboardPage.isPageOpened();
+        DashboardPage dashboardPage = loginUtils.loginStandardUser();
+        Assert.assertTrue(dashboardPage.isPageOpened(),"Dashboard Page is not opened");
         Header header = dashboardPage.getHeader();
         header.clickUserDropdown();
         LoginPage loginPage = header.clickLogout();

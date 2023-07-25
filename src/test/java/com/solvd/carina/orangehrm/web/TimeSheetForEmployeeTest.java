@@ -17,7 +17,7 @@ public class TimeSheetForEmployeeTest extends AbstractWebTest {
 
     @Test
     public void testTimesheetForEmployee() {
-        EmployeeTimeSheetsPage employeeTimeSheetsPage = navigateToTimeSheets();
+        EmployeeTimeSheetsPage employeeTimeSheetsPage = navigationUtils.navigateToEmployeeTimeSheetsPage();
         Assert.assertTrue(employeeTimeSheetsPage.isPageOpened(), "TimesheetsPage is not opened");
         List<EmployeeTimeSheetRecord> records = employeeTimeSheetsPage.getEmployeeTimeSheetRecords();
         EmployeeTimeSheetRecord randomRecord = records.get(0);

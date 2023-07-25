@@ -34,7 +34,8 @@ public class EmployeeTimeSheetsPage extends AbstractPage {
         return Integer.parseInt(num.trim());
     }
 
-    public List<EmployeeTimeSheetRecord> getEmployeeTimeSheetRecords() {
+        public List<EmployeeTimeSheetRecord> getEmployeeTimeSheetRecords() {
+        recordsFoundText.isElementPresent();
         return employeeTimeSheetRecords;
     }
 }

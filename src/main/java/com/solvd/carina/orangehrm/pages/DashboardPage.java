@@ -30,7 +30,6 @@ public class DashboardPage extends AbstractPage {
     }
 
     public Header getHeader() {
-        isPageOpened();
         return header;
     }
 }

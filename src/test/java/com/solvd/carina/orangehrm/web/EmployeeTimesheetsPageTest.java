@@ -17,7 +17,7 @@ public class EmployeeTimesheetsPageTest extends AbstractWebTest {
 
     @Test
     public void testEmployeeTimesheetsOnTimesheetsClick() {
-        DashboardPage dashboardPage = login();
+        DashboardPage dashboardPage = loginUtils.loginStandardUser();
         EmployeeTimeSheetsPage employeeTimeSheetsPage = dashboardPage.clickTimeSheetsButton();
         Assert.assertTrue(employeeTimeSheetsPage.isPageOpened(), "Employee timesheets page is not opened");
         List<EmployeeTimeSheetRecord> recordList = employeeTimeSheetsPage.getEmployeeTimeSheetRecords();
