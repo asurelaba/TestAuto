@@ -15,7 +15,7 @@ public class CheckoutOverviewScreen extends CheckoutOverviewScreenBase {
     private ExtendedWebElement overviewTitle;
 
     @ExtendedFindBy(accessibilityId = "test-FINISH")
-    private  ExtendedWebElement finishButton;
+    private ExtendedWebElement finishButton;
 
     public CheckoutOverviewScreen(WebDriver driver) {
         super(driver);
@@ -28,7 +28,7 @@ public class CheckoutOverviewScreen extends CheckoutOverviewScreenBase {
 
     @Override
     public CheckoutCompleteScreenBase clickFinishButton() {
-        swipe(finishButton,5);
+        swipe(finishButton, 5);
         finishButton.click();
         return initPage(getDriver(), CheckoutCompleteScreenBase.class);
     }

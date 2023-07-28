@@ -15,7 +15,7 @@ public class CartTest extends AbstractMobileTest {
         productScreen.clickAddToCartButton(product);
         Assert.assertTrue(productScreen.isRemoveButtonPresent(product), "Remove button is not shown after Add to cart is clicked");
         CartScreenBase cartScreen = productScreen.clickCartIcon();
-        Assert.assertTrue(cartScreen.isOpened(),"cart screen is not opened");
+        Assert.assertTrue(cartScreen.isOpened(), "cart screen is not opened");
         Assert.assertTrue(cartScreen.isProductPresent(product), product + " is not added to the cart");
     }
 

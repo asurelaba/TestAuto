@@ -14,10 +14,10 @@ public class LoginTest extends AbstractMobileTest {
         String username = "standard_user";
         String password = "secret_sauce";
         LoginScreenBase loginScreen = initPage(getDriver(), LoginScreenBase.class);
-        Assert.assertTrue(loginScreen.isOpened(),"login screen is not opened");
+        Assert.assertTrue(loginScreen.isOpened(), "login screen is not opened");
         loginScreen.typeUsername(username);
         loginScreen.typePassword(password);
         ProductScreenBase productScreen = loginScreen.clickLoginButton();
-        Assert.assertTrue(productScreen.isOpened(),"Product screen is opened");
+        Assert.assertTrue(productScreen.isOpened(), "Product screen is opened");
     }
 }

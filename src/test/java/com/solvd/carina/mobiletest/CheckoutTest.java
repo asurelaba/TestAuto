@@ -7,12 +7,12 @@ import com.solvd.carina.mobile.base.ProductScreenBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckoutTest extends AbstractMobileTest{
+public class CheckoutTest extends AbstractMobileTest {
 
     @Test
     public void testCheckoutProcess() {
         CheckoutInformationScreenBase checkoutScreen = navigationUtils.navigateToCartWithItems().clickCheckoutButton();
-        Assert.assertTrue(checkoutScreen.isOpened(),"Checkout Screen is not opened");
+        Assert.assertTrue(checkoutScreen.isOpened(), "Checkout Screen is not opened");
         checkoutScreen.typeFirstNameField("jane");
         checkoutScreen.typeLastNameField("doe");
         checkoutScreen.typeZipcodeField("12345");

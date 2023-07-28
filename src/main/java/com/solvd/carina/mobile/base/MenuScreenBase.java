@@ -11,5 +11,5 @@ public abstract class MenuScreenBase extends MobileAbstractPage {
 
     public abstract LoginScreenBase clickLogoutText();
 
-    public abstract  WebViewScreenBase clickAboutText();
+    public abstract WebViewScreenBase clickAboutText();
 }

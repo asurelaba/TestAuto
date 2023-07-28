@@ -38,14 +38,13 @@ public class CartScreen extends CartScreenBase {
     @Override
     public void clickRemoveButton(String product) {
         removeButton = removeButton.format(product);
-        swipe(removeButton,3);
+        swipe(removeButton, 3);
         removeButton.click();
     }
 
     @Override
     public CheckoutInformationScreenBase clickCheckoutButton() {
-        if(swipe(checkoutButton,5))
-        {
+        if (swipe(checkoutButton, 5)) {
             checkoutButton.click();
         }
         return initPage(getDriver(), CheckoutInformationScreenBase.class);

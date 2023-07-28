@@ -12,8 +12,8 @@ public class LogoutTest extends AbstractMobileTest {
     public void testLogout() {
         ProductScreenBase productScreen = authUtils.loginStandardUser();
         MenuScreenBase menuScreen = productScreen.clickMenuIcon();
-        Assert.assertTrue(menuScreen.isOpened(),"Menu screen not opened");
+        Assert.assertTrue(menuScreen.isOpened(), "Menu screen not opened");
         LoginScreenBase loginScreen = menuScreen.clickLogoutText();
-        Assert.assertTrue(loginScreen.isOpened(),"login screen not opened");
+        Assert.assertTrue(loginScreen.isOpened(), "login screen not opened");
     }
 }
