@@ -1,16 +1,15 @@
 package com.solvd.carina.mobile.ios;
 
 import com.solvd.carina.mobile.base.CartScreenBase;
-import com.solvd.carina.mobile.base.MenuScreenBase;
-import com.solvd.carina.mobile.base.ProductScreenBase;
+import com.solvd.carina.mobile.base.CheckoutInformationScreenBase;
 import com.solvd.carina.mobile.constants.IosMessage;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import org.openqa.selenium.WebDriver;
 
-@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = ProductScreenBase.class)
-public class ProductScreen extends ProductScreenBase {
+@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = CartScreenBase.class)
+public class CartScreen extends CartScreenBase {
 
-    public ProductScreen(WebDriver driver) {
+    public CartScreen(WebDriver driver) {
         super(driver);
     }
 
@@ -20,27 +19,17 @@ public class ProductScreen extends ProductScreenBase {
     }
 
     @Override
-    public void clickAddToCartButton(String product) {
-        throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
-    }
-
-    @Override
-    public CartScreenBase clickCartIcon() {
-        throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
-    }
-
-    @Override
     public void clickRemoveButton(String product) {
         throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
     }
 
     @Override
-    public MenuScreenBase clickMenuIcon() {
+    public CheckoutInformationScreenBase clickCheckoutButton() {
         throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
     }
 
     @Override
-    public boolean isRemoveButtonPresent(String product) {
+    public boolean isProductPresent(String product) {
         throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
     }
 }
