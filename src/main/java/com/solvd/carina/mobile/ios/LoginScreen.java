@@ -1,7 +1,6 @@
 package com.solvd.carina.mobile.ios;
 
 import com.solvd.carina.mobile.base.LoginScreenBase;
-import com.solvd.carina.mobile.base.ProductScreenBase;
 import com.solvd.carina.mobile.constants.IosMessage;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import org.openqa.selenium.WebDriver;

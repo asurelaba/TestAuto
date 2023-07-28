@@ -2,8 +2,6 @@ package com.solvd.carina.mobiletest;
 
 import com.solvd.carina.mobile.base.LoginScreenBase;
 import com.solvd.carina.mobile.base.ProductScreenBase;
-import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

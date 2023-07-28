@@ -1,6 +1,5 @@
 package com.solvd.carina.mobile.ios;
 
-import com.solvd.carina.mobile.base.CartScreenBase;
 import com.solvd.carina.mobile.base.CheckoutCompleteScreenBase;
 import com.solvd.carina.mobile.base.ProductScreenBase;
 import com.solvd.carina.mobile.constants.IosMessage;

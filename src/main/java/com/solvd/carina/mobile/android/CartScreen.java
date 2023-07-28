@@ -17,9 +17,6 @@ public class CartScreen extends CartScreenBase {
     @ExtendedFindBy(accessibilityId = "test-CHECKOUT")
     private ExtendedWebElement checkoutButton;
 
-//    @FindBy(xpath = "")
-//    private List<ExtendedWebElement> products;
-
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Description\"]/android.widget.TextView[@text=\"%s\"]")
     private ExtendedWebElement productTitle;
 

@@ -1,6 +1,5 @@
 package com.solvd.carina.mobile.ios;
 
-import com.solvd.carina.mobile.base.CheckoutOverviewScreenBase;
 import com.solvd.carina.mobile.base.LoginScreenBase;
 import com.solvd.carina.mobile.base.MenuScreenBase;
 import com.solvd.carina.mobile.base.WebViewScreenBase;

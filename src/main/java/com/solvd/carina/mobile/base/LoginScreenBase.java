@@ -1,6 +1,5 @@
 package com.solvd.carina.mobile.base;
 
-import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.gui.mobile.devices.MobileAbstractPage;
 import org.openqa.selenium.WebDriver;
 

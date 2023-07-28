@@ -5,7 +5,6 @@ import com.solvd.carina.mobile.base.LoginScreenBase;
 import com.solvd.carina.mobile.base.ProductScreenBase;
 import com.zebrunner.carina.utils.R;
 import com.zebrunner.carina.utils.factory.ICustomTypePageFactory;
-import org.testng.Assert;
 
 public class NavigationUtils implements ICustomTypePageFactory {
 
