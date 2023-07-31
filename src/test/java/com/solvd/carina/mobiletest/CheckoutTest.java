@@ -11,7 +11,7 @@ public class CheckoutTest extends AbstractMobileTest implements DataProviderForT
 
     @Test(dataProvider = "ProductNames")
     public void testCheckoutProcess(String... productNames) {
-        CartScreenBase cartScreen = navigationUtils.navigateToCartWithItems(authUtils.loginStandardUser(), Arrays.asList(productNames));
+        CartScreenBase cartScreen = navigationUtils.navigateToCartWithItems(Arrays.asList(productNames));
         CheckoutInformationScreenBase checkoutScreen = cartScreen.clickCheckoutButton();
         Assert.assertTrue(checkoutScreen.isOpened(), "Checkout Screen is not opened");
         checkoutScreen.typeFirstNameField(R.TESTDATA.get("mobile.firstname"));

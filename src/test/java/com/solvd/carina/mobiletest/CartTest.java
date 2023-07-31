@@ -24,8 +24,7 @@ public class CartTest extends AbstractMobileTest implements DataProviderForTest 
 
     @Test(dataProvider = "ProductNames")
     public void testRemoveFromCartFromProductScreen(String... productNames) {
-        ProductScreenBase productScreenBeforeItemsAddedToCart = authUtils.loginStandardUser();
-        ProductScreenBase productScreen = navigationUtils.navigateToProductScreenAfterItemsAddedToCart(productScreenBeforeItemsAddedToCart, Arrays.asList(productNames));
+        ProductScreenBase productScreen = navigationUtils.navigateToProductScreenAfterItemsAddedToCart(Arrays.asList(productNames));
         String product = R.TESTDATA.get("mobile.product");
         productScreen.clickRemoveButton(product);
         CartScreenBase cartScreen = productScreen.clickCartIcon();
@@ -34,8 +33,7 @@ public class CartTest extends AbstractMobileTest implements DataProviderForTest 
 
     @Test(dataProvider = "ProductNames")
     public void testRemoveFromCartFromCartScreen(String... productNames) {
-        ProductScreenBase productScreenbeforeItemsAddedToCart = authUtils.loginStandardUser();
-        CartScreenBase cartScreen = navigationUtils.navigateToCartWithItems(productScreenbeforeItemsAddedToCart, Arrays.asList(productNames));
+        CartScreenBase cartScreen = navigationUtils.navigateToCartWithItems(Arrays.asList(productNames));
         String product = R.TESTDATA.get("mobile.product");
         cartScreen.clickRemoveButton(product);
         Assert.assertFalse(cartScreen.isProductPresent(product), "Failed to remove item in cart on Remove button in Cart Screen");

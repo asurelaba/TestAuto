@@ -8,12 +8,13 @@ import java.util.List;
 
 public class NavigationUtils implements ICustomTypePageFactory {
 
-    public CartScreenBase navigateToCartWithItems(ProductScreenBase productScreen, List<String> products) {
-        navigateToProductScreenAfterItemsAddedToCart(productScreen, products);
-        return productScreen.clickCartIcon();
+    public CartScreenBase navigateToCartWithItems(List<String> products) {
+        return navigateToProductScreenAfterItemsAddedToCart(products)
+                .clickCartIcon();
     }
 
-    public ProductScreenBase navigateToProductScreenAfterItemsAddedToCart(ProductScreenBase productScreen, List<String> products) {
+    public ProductScreenBase navigateToProductScreenAfterItemsAddedToCart(List<String> products) {
+        ProductScreenBase productScreen = new AuthUtils().loginStandardUser();
         products.forEach(product -> productScreen.clickAddToCartButton(product));
         return productScreen;
     }
