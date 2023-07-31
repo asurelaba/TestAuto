@@ -20,12 +20,12 @@ public class MenuScreen extends MenuScreenBase {
     }
 
     @Override
-    public LoginScreenBase clickLogoutText() {
+    public LoginScreenBase clickLogoutLink() {
         throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
     }
 
     @Override
-    public WebViewScreenBase clickAboutText() {
+    public WebViewScreenBase clickAboutLink() {
         throw new UnsupportedOperationException(IosMessage.NOT_IMPLEMENTED.getMessage());
     }
 }

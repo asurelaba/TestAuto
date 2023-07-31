@@ -5,6 +5,7 @@ import com.solvd.carina.mobile.base.MenuScreenBase;
 import com.solvd.carina.mobile.base.ProductScreenBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
+import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -15,10 +16,10 @@ public class ProductScreen extends ProductScreenBase {
     @FindBy(xpath = "//android.widget.TextView[@text='PRODUCTS']")
     private ExtendedWebElement productScreenTitle;
 
-    @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Menu\"]/android.view.ViewGroup/android.widget.ImageView")
+    @ExtendedFindBy(accessibilityId = "test-Menu")
     private ExtendedWebElement menuIcon;
 
-    @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart\"]/android.view.ViewGroup/android.widget.ImageView")
+    @ExtendedFindBy(accessibilityId = "test-Cart")
     private ExtendedWebElement cartIcon;
 
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc='test-Item']//android.widget.TextView[@text='%s']")

@@ -9,7 +9,7 @@ public abstract class MenuScreenBase extends MobileAbstractPage {
         super(driver);
     }
 
-    public abstract LoginScreenBase clickLogoutText();
+    public abstract LoginScreenBase clickLogoutLink();
 
-    public abstract WebViewScreenBase clickAboutText();
+    public abstract WebViewScreenBase clickAboutLink();
 }

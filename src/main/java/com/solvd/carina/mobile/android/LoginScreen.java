@@ -4,7 +4,6 @@ import com.solvd.carina.mobile.base.LoginScreenBase;
 import com.solvd.carina.mobile.base.ProductScreenBase;
 import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 

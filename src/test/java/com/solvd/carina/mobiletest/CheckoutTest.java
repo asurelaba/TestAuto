@@ -1,21 +1,22 @@
 package com.solvd.carina.mobiletest;
 
-import com.solvd.carina.mobile.base.CheckoutCompleteScreenBase;
-import com.solvd.carina.mobile.base.CheckoutOverviewScreenBase;
-import com.solvd.carina.mobile.base.CheckoutInformationScreenBase;
-import com.solvd.carina.mobile.base.ProductScreenBase;
+import com.solvd.carina.mobile.base.*;
+import com.solvd.carina.mobiletest.dataprovider.DataProviderForTest;
+import com.zebrunner.carina.utils.R;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import java.util.Arrays;
 
-public class CheckoutTest extends AbstractMobileTest {
+public class CheckoutTest extends AbstractMobileTest implements DataProviderForTest {
 
-    @Test
-    public void testCheckoutProcess() {
-        CheckoutInformationScreenBase checkoutScreen = navigationUtils.navigateToCartWithItems().clickCheckoutButton();
+    @Test(dataProvider = "ProductNames")
+    public void testCheckoutProcess(String... productNames) {
+        CartScreenBase cartScreen = navigationUtils.navigateToCartWithItems(authUtils.loginStandardUser(), Arrays.asList(productNames));
+        CheckoutInformationScreenBase checkoutScreen = cartScreen.clickCheckoutButton();
         Assert.assertTrue(checkoutScreen.isOpened(), "Checkout Screen is not opened");
-        checkoutScreen.typeFirstNameField("jane");
-        checkoutScreen.typeLastNameField("doe");
-        checkoutScreen.typeZipcodeField("12345");
+        checkoutScreen.typeFirstNameField(R.TESTDATA.get("mobile.firstname"));
+        checkoutScreen.typeLastNameField(R.TESTDATA.get("mobile.lastname"));
+        checkoutScreen.typeZipcodeField(R.TESTDATA.get("mobile.zipcode"));
         CheckoutOverviewScreenBase checkoutOverviewScreen = checkoutScreen.clickContinueButton();
         Assert.assertTrue(checkoutOverviewScreen.isOpened(), "Checkout Overview Screen is not opened");
         CheckoutCompleteScreenBase checkoutCompleteScreen = checkoutOverviewScreen.clickFinishButton();

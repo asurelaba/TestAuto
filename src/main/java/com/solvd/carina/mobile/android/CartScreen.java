@@ -41,15 +41,14 @@ public class CartScreen extends CartScreenBase {
 
     @Override
     public CheckoutInformationScreenBase clickCheckoutButton() {
-        if (swipe(checkoutButton, 5)) {
-            checkoutButton.click();
-        }
+        swipe(checkoutButton, 5);
+        checkoutButton.click();
         return initPage(getDriver(), CheckoutInformationScreenBase.class);
     }
 
     @Override
     public boolean isProductPresent(String product) {
         productTitle = productTitle.format(product);
-        return swipe(productTitle);
+        return swipe(productTitle,3);
     }
 }

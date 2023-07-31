@@ -10,7 +10,7 @@ public class WebViewScreenTest extends AbstractMobileTest {
     @Test
     public void testUrlOnClickAbout() {
         MenuScreenBase menuScreen = authUtils.loginStandardUser().clickMenuIcon();
-        WebViewScreenBase webViewScreen = menuScreen.clickAboutText();
+        WebViewScreenBase webViewScreen = menuScreen.clickAboutLink();
         Assert.assertTrue(webViewScreen.isOpened(), "Webview screen is not opened");
         Assert.assertTrue(webViewScreen.isUrlEqual("saucelabs.com"), "Url does not match");
     }
