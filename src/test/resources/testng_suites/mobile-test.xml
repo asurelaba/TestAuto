@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Dummy Json API" parallel="methods" thread-count="1">
+    <test name="Mobile Test Sauce Labs">
+        <classes>
+            <class name="com.solvd.carina.mobiletest.CartTest">
+                <methods>
+                    <include name="testAddToCart"/>
+                    <include name="testRemoveFromCartFromProductScreen"/>
+                    <include name="testRemoveFromCartFromCartScreen"/>
+                </methods>
+            </class>
+            <class name="com.solvd.carina.mobiletest.CheckoutTest">
+                <methods>
+                    <include name="testCheckoutProcess"/>
+                </methods>
+            </class>
+            <class name="com.solvd.carina.mobiletest.LoginTest">
+                <methods>
+                    <include name="testLoginWithValidCredentials"/>
+                </methods>
+            </class>
+            <class name="com.solvd.carina.mobiletest.LogoutTest">
+                <methods>
+                    <include name="testLogout"/>
+                </methods>
+            </class>
+            <class name="com.solvd.carina.mobiletest.WebViewScreenTest">
+                <methods>
+                    <include name="testUrlOnClickAbout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
